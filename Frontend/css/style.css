@@ -1,0 +1,468 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Importing fonts */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&family=Oswald:wght@300&display=swap');
+
+
+
+
+/* Utility Classes */
+
+.row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.justify-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#heading{
+    font-size: 3vw;
+}
+
+my-2 {
+    margin: 0px 2vw;
+}
+
+
+/* Styling css */
+
+.contact-info{
+    height: 10vh;
+    align-items: center;
+    width: 100%;
+}
+
+.call-icon{
+    width: 30px;
+    height: 30px;
+    filter: invert(80%);
+    -webkit-filter: invert(95%);
+    border-radius: 10px;
+    scale: .8;
+}
+
+.m-img{
+    margin-left: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+}
+
+a{
+    cursor: pointer;
+}
+
+.image{
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+}
+
+.image:hover{
+    width: 35px;
+    height: 35px;
+    border-radius: 27px;
+}
+
+.info{
+    width: 90%;
+}
+
+.imgs ul li{
+    margin-left: 4px;
+}
+
+.main-img{
+    height: 60vw;
+    width: 100vw;
+    margin-top: .2vh;
+    border-radius: .5vh;
+}
+
+.main-img-container{
+    
+}
+
+
+/* Styling NavBar */
+
+nav{
+    /* width: 20px; */
+    background-color: gray;
+    width: 100%;
+
+}
+
+.components{
+    background-color: white;
+    border-bottom: 1px solid black;
+}
+
+.title{
+    color: #00619e;
+    font-size: 1.5vw;
+    font-family: 'Oswald', sans-serif;
+    margin: 0vw 2.2vw;
+}
+
+.options ul li{
+    font-size: 1.3vw;
+    padding: 10px;
+    font-family: 'Nunito', sans-serif;
+}
+
+.options ul li:hover{
+    font-size: 1.4vw;
+}
+
+.rtitle{
+    font-size: 3vw;
+}
+
+.contact-us{
+    justify-self: end;
+}
+
+.c-us-btn{
+    background-color: rgb(31 41 55/800);
+    color: white;
+    /* justify-self: end; */
+    /* margin-left: 42vw; */
+    font-family: 'Nunito', sans-serif;
+    padding: 10px;
+    border-radius: 2vh;
+}
+
+.c-us-btn:hover{
+    background-color: white;
+    border: 1px solid rgb(31 41 55/800);
+    color: rgb(31 41 55/800);
+    transition: ease-in-out;
+}
+
+
+
+
+/* About services */
+
+
+.about-services{
+    display: flex;
+    margin-top: 30px;
+    justify-content: center;
+}
+
+.services-component{
+    /* /* height: 40vh; */
+    width: 20vw;
+    text-align: center;
+    
+    background-color: #543737;
+    color: wheat;
+    font-family: 'Nunito', sans-serif;
+    margin: 30px;
+    padding: 2vw;
+    border-radius: 20px;
+}
+
+
+.s-component-title{
+    color: white;
+    font-size: 30px;
+    text-align: center;
+}
+
+.aboutus{
+    position: relative;
+    display: inline-block;
+   margin-right: 2vw;
+}
+
+#a-dropdown{
+    position: absolute;
+    font-size: medium;
+    background-color: white;
+    display: none;
+    border-radius: .5vw;
+    transition: all 0.5s ease-in-out;
+    animation-duration: 1000ms;
+}
+
+/* #a-dropdown li{
+    width: 8vw;
+    font-size: medium;
+    display: none;
+    border-radius: .5vw;
+} */
+
+.aboutus:hover #a-dropdown{
+    display: block;
+}
+
+.services{
+   position: relative;
+   display: inline-block;
+   margin-right: 2vw;
+}
+
+#s-dropdown {
+    position: absolute;
+    background-color: white;
+    /* visibility:hidden; */
+    border-radius: .5vw;
+    display: none;
+    /* height: ; */
+}
+
+.services:hover #s-dropdown{
+    display: block;
+}
+
+.align-arrow-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow{
+    max-height: 2vw;
+    max-width: 2vw;
+}
+
+
+/* .services-component{
+    width: 20vw;
+    
+    background-color: black;
+    color: wheat;
+} */
+
+
+/* Main title And More Info ,slogan etc. */
+
+.more-a-us{
+    background-color: rgb(166, 184, 212);
+}
+
+
+.slogan span{
+    font-size: 18px;
+    color: rgb(41 111 83);
+    font-family: 'Oswald', sans-serif;
+    /* display: flex;
+    justify-items: center;
+    align-items: center; */
+}
+
+.slogan{
+    justify-content: center;
+}
+
+.title-n-slogan{
+    justify-content: center;
+}
+
+/* .m-title{} */
+
+
+
+/* Styling card */
+.i-c-c{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2vw;
+}
+
+.info-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2vw;
+    width: 70vw;
+    background-color: rgb(245, 240, 240);
+    padding: 2vw;
+}
+
+.i-card{
+    /* border-radius: 20px; */
+    padding: 3vw;
+}
+
+#s-img{
+    /* border-radius: 2vw; */
+    /* scale: 2; */
+    height: 10vw;
+    width: 44vw;
+}
+
+.card-info{
+    text-align: left;
+    font-size: 2vw;
+    margin: 3vw;
+    /* max-width: 10vw; */
+}
+
+.card-info p{
+    text-align: left;
+    font-size: 1vw;
+    padding: .2vw;
+}
+#nicoh{
+    color: #00619e;
+}
+
+/* Styling 'Our Services' means Card */
+
+.our-services{
+    justify-content: center;
+    margin: 2vw;
+    padding: 2vw;
+    display: grid;
+    background-color: beige;
+    /* background-image: url('../css/images/logos/bckimage.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%; */
+}
+
+.card{
+   padding: 2vw;
+   max-width:40%;
+}
+.card-title{
+    font-size: 2vw;
+    border-bottom: 1px solid black;
+}
+
+.card-text{
+    font-size: 1vw;
+}
+
+.card-c-btn{
+    padding: 1vw;
+}
+
+.card-btn{
+    background-color: rgb(17, 16, 16);
+    padding: 1vw;
+    color: whitesmoke;
+    border-radius: 1vw;
+}
+
+.card-btn:hover{
+    background-color: rgb(240, 233, 222);
+    padding: 1vw;
+    color: rgb(17, 16, 16);
+    border: .6px solid rgb(17, 16, 16);
+}
+
+
+.card-img img{ 
+    width:100%
+}
+
+/* .row-span-card{
+    grid-row: span 3;
+} */
+
+
+/* Styling Our Client div */
+
+.head{
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+.our-clients {
+    background-color: rgb(135, 247, 235);
+    margin: .1vw;
+    margin-bottom: 1vw;
+}
+
+.o-c-img{
+    mix-blend-mode: multiply;
+}
+
+.main-o-c{
+    padding: 2vw;
+    display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow-y: scroll;
+}
+
+.heading-o-c{
+    font-size: 3vw;
+}
+.o-c-component{
+    text-align: center;
+    margin: 0px 1vw;
+}
+
+.o-c-img{
+    max-width: 10vw;
+}
+
+.o-c-name{
+    font-style: italic;
+    padding: .3vw;
+    word-wrap: break-word;
+}
+.o-c-btn{
+    font-size: 1vw;
+    background-color: black;
+    color: wheat;
+    padding: .6vw;
+    border-radius: 1vw;
+}
+
+.o-c-btn:hover{
+    font-size: 1vw;
+    background-color: whitesmoke;
+    color: black;
+    border: 1px solid black;
+    padding: .6vw;
+    border-radius: 1vw;
+}
+
+/* Styling recall */
+
+.recall{
+    background-color: firebrick;
+    color: whitesmoke;
+    padding: 2vw;
+    justify-content: space-between;
+    display: flex;
+}
+
+
+.c-us{
+    justify-content: space-between;
+}
+
+.r-our-services-components{
+    padding: 2vw;
+}
+
+ .r-our-services-components-head {
+     font-size: 2vw;
+     text-align: center;
+     margin-bottom: 2vw;
+ }
+
+@media screen and (max-width:920px) {
+    
+    .r-our-services-components-head{
+        font-size: 3vw;
+        text-align: center;
+        margin-bottom: 2vw;
+    }
+}
