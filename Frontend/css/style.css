@@ -466,3 +466,104 @@ nav{
         margin-bottom: 2vw;
     }
 }
+
+.last{
+    border-top: 1px solid wheat;
+    background-color: firebrick;
+    color: wheat;
+    padding: 1vw;
+    font-size: 1.5vw;
+    text-align: center;
+}
+
+
+
+/* Styling Page- contact */
+
+.contact-boxes{
+    background-color: cyan;
+    display: flex;
+    justify-content: center;
+    padding: 2vw;
+}
+.contact-box{
+    border-radius: .5vw;
+    margin: 2vw;
+    background-color: white;
+    color: rgb(17, 16, 16);
+    padding: 2vw;
+    text-align: center;
+    width: 22%;
+    /* height: 22%; */
+}
+.contact-box:hover{
+    border-radius: .5vw;
+    margin: 2vw;
+    background-color: rgb(29, 27, 27);
+        padding: 2vw;
+        color: wheat;
+        text-align: center;
+}
+
+.C-head{
+    font-size: 1.9vw;
+}
+
+.img-c{
+    justify-content: center;
+        display: flex;
+}
+
+.C-img-m{
+    border-radius: 20vw;
+    scale: .4;
+}
+.C-img-p{
+    border-radius: 1vw;
+    scale: .4;
+    /* mix-blend-mode: multiply; */
+}
+
+.m-n-f{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2vw;
+}
+
+.map{
+    margin-right: 1vw;
+}
+
+.feedback{
+        font-family: 'Nunito', sans-serif;
+}
+
+.text-area{
+    border-color: cyan;
+    padding: 1vw;
+    background-color: aqua;
+    margin: .5vw;
+}
+.text-area-l{
+    border-color: cyan;
+    padding: 1vw;
+    background-color: aqua;
+    margin: 1vw;
+    width: 63%;
+    text-align: center;
+    /* height: 50%; */
+}
+
+.submit-btn{
+    padding: 1vw;
+    background-color: rgb(100, 100, 168);
+    color: white;
+    border-radius: 1vw;
+    justify-self: end;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+}
