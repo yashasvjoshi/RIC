@@ -31,7 +31,12 @@ my-2 {
 }
 
 
-/* Styling css */
+.p-o-h:hover.c-input{
+    /* margin-left: 2vw; */
+    text-align: center;
+}
+
+/* Styling Page Home */
 
 .contact-info{
     height: 10vh;
@@ -509,6 +514,12 @@ nav{
     font-size: 1.9vw;
 }
 
+@media only screen and (max-width: 915px) {
+    .C-head{
+        font-size: 3vw;
+    }
+}
+
 .img-c{
     justify-content: center;
         display: flex;
@@ -566,4 +577,52 @@ nav{
 .btn{
     display: flex;
     justify-content: center;
+}
+
+
+/* Styling page career */
+
+.career-main{
+    background-color: turquoise;
+    padding: 3%;
+    width: 60vw;
+    /* height: 0vw; */
+}
+
+/* @media only screen and (max-width:915px) {
+    .career-main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+} */
+
+.inputs{
+    width: 100%;
+    /* display: flex; */
+    justify-content: space-between;
+}
+
+.c-row{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* .c-input{
+    padding: 1vw;
+    margin: 1%;
+} */
+
+.career-container{
+    padding: 2rem;
+}
+
+.inp-c{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    text-align: start;
+    padding: 1px;
 }

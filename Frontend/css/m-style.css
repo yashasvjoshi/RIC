@@ -206,3 +206,15 @@ nav{
 .m-n-f{
     flex-direction: column;
 }
+
+.contact-boxes{
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.contact-box{
+    min-width: 80%;
+    font-size: 3vw;
+}
