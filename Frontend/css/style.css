@@ -33,7 +33,7 @@ my-2 {
 
 .p-o-h:hover.c-input{
     /* margin-left: 2vw; */
-    text-align: center;
+    /* text-align: center; */
 }
 
 /* Styling Page Home */
@@ -605,14 +605,13 @@ nav{
 }
 
 .c-row{
-    display: flex;
-    justify-content: space-between;
 }
 
-/* .c-input{
+
+
+.c-input{
     padding: 1vw;
-    margin: 1%;
-} */
+}
 
 .career-container{
     padding: 2rem;
@@ -625,4 +624,29 @@ nav{
     /* align-items: center; */
     text-align: start;
     padding: 1px;
+}
+
+.btn-c-c{
+    /* display: flex;
+    align-items: center; */
+    /* justify-content: left; */
+    margin-left: 1vw;
+    margin-top: 1vw;
+}
+.btn-c{
+    background-color: rgb(8, 8, 8);
+    color: wheat;
+    padding: 1vw;
+    border-radius: 1vw;
+}
+.btn-c:hover{
+    background-color: rgb(23, 45, 32);
+    color: wheat;
+    padding: 1vw;
+    border-radius: 1vw;
+}
+
+.text-area-message{
+    padding: 2vw;
+    margin: 1vw;
 }
