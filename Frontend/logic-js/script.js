@@ -3,6 +3,8 @@ let path = document.location.pathname.split("/");
 
 document.head = document.head || document.getElementsByTagName("head")[0];
 
+let af = document.getElementById("a-f");
+
 function changeFavicon(src) {
   var link = document.createElement("link"),
     oldLink = document.getElementById("dynamic-favicon");
@@ -37,28 +39,30 @@ let title = document.getElementById("title");
 let mContent = document.getElementById("m-content");
 let mContentUl = document.getElementById("m-c-ul");
 
-menuImg.addEventListener("pointerdown", () => {
-  if (mContentUl.style.visibility == "visible") {
-    mContentUl.style.visibility = "hidden";
-    mContent.style.visibility = "hidden";
-    mContent.style.height = "0px";
-  } else {
-    mContentUl.style.visibility = "visible";
-    mContent.style.visibility = "visible";
-    // mContentUl.style.backgroundColor = "white";
-    // mContentUl.style.width = "100%";
-    title.style.display = "top";
-    // mContent.style.display = "block";
-  }
-});
+// menuImg.addEventListener("pointerdown", () => {
+//   if (mContentUl.style.visibility == "visible") {
+//     mContentUl.style.visibility = "hidden";
+//     mContent.style.visibility = "hidden";
+//     mContent.style.height = "0px";
+//   } else {
+//     mContentUl.style.visibility = "visible";
+//     mContent.style.visibility = "visible";
+//     // mContentUl.style.backgroundColor = "white";
+//     // mContentUl.style.width = "100%";
+//     title.style.display = "top";
+//     // mContent.style.display = "block";
+//   }
+// });
 
 // PAGE CAREER
 
-let af = document.getElementById("o");
-
-af.addEventListener("click", (e) => {
-  alert("byufdd");
-});
-// af.addEventListener("change", (e) => {
-//   alert(e.target.value);
+// af.addEventListener("click", () => {
+//   alert("huufufhh");
 // });
+af.addEventListener("change", (e) => {
+  if (e.target.value == "Others...") {
+    alert(e.target.value);
+    console.log(af);
+    af.classList.add()
+  }
+});

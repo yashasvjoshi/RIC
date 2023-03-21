@@ -19,9 +19,10 @@
     />
     <link rel="stylesheet" href="../css/style.css" />
     <title>RIC</title>
+    <script src="../logic-js/script.js" defer></script>
   </head>
   <body>
-    <script src="../logic-js/script.js" defer></script>
+    
 
     <div class="contact-info flex text-white bg-gray-800">
       <div class="container flex">
@@ -153,7 +154,7 @@
                         </div>
                             <div class="inp-c">
                             <label for="ApplyFor">Apply For</label>
-                            <select value="Apply For" aria-placeholder="ApplyFor" id="a-f" class="p-o-h text-area c-input">
+                            <select value="Apply For" aria-placeholder="ApplyFor" id="a-f" class="p-o-h select-visiblity-visible text-area c-input">
                               <option name="sd" id="sd">Software developer</option>
                               <option name="wd" id="wd">Website developer</option>
                               <option name="ad" id="ad">Android developer</option>
@@ -161,6 +162,9 @@
                               <option name="dfo" id="dfo">Data feeding oprator</option>
                               <option name="o" id="o">Others...</option>
                             </select>
+
+                              <input type="text" class="p-o-h text-area c-input o-tb-hidden">
+                          
                         </div>
 
                     </div>
@@ -305,5 +309,6 @@
         </span>
     </a>
 </div>
+
       </body>
 </html>
