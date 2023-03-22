@@ -3,8 +3,16 @@ let path = document.location.pathname.split("/");
 
 document.head = document.head || document.getElementsByTagName("head")[0];
 
+let winWidth = window.screen.width;
 let af = document.getElementById("a-f");
+let otb = document.getElementById("o-tb");
+let apf = document.getElementById("ap-f");
+let menuBtn = document.getElementById("menu-btn");
+let title = document.getElementById("title");
+let mContent = document.getElementById("m-content");
+let componentsBorder = document.querySelector("#C-B");
 
+mContent.style.visibility = "hidden";
 function changeFavicon(src) {
   var link = document.createElement("link"),
     oldLink = document.getElementById("dynamic-favicon");
@@ -20,7 +28,6 @@ function changeFavicon(src) {
 changeFavicon("../css/images/ric-logos/logo.png");
 
 if (path[3] == "contact.html") {
-  // console.log(path[3]);
   document.title = ptitle + "-Contact Us";
 } else if (path[3] == "index.html") {
   document.title = ptitle;
@@ -34,35 +41,60 @@ if (path[3] == "contact.html") {
 
 // On click in nav
 
-let menuImg = document.getElementById("menu-img");
-let title = document.getElementById("title");
-let mContent = document.getElementById("m-content");
-let mContentUl = document.getElementById("m-c-ul");
+// let mContentUl = document.getElementById("m-c-ul");
 
-// menuImg.addEventListener("pointerdown", () => {
-//   if (mContentUl.style.visibility == "visible") {
-//     mContentUl.style.visibility = "hidden";
-//     mContent.style.visibility = "hidden";
-//     mContent.style.height = "0px";
-//   } else {
-//     mContentUl.style.visibility = "visible";
-//     mContent.style.visibility = "visible";
-//     // mContentUl.style.backgroundColor = "white";
-//     // mContentUl.style.width = "100%";
-//     title.style.display = "top";
-//     // mContent.style.display = "block";
-//   }
-// });
+if (winWidth < 920) {
+  menuBtn.addEventListener("pointerdown", () => {
+    if (mContent.style.visibility == "hidden") {
+      mContent.style.visibility = "visible";
+      mContent.style.height = "auto";
+
+      componentsBorder.classList.remove("YesBorder");
+      componentsBorder.classList.add("NoBorder");
+
+      console.log(
+        
+      );
+    } else {
+      mContent.style.height = "0px";
+      mContent.style.visibility = "hidden";
+
+      componentsBorder.classList.remove("NoBorder");
+      componentsBorder.classList.add("YesBorder");
+    }
+
+    // alert("hi");
+  });
+}
 
 // PAGE CAREER
 
 // af.addEventListener("click", () => {
 //   alert("huufufhh");
 // });
-af.addEventListener("change", (e) => {
-  if (e.target.value == "Others...") {
-    alert(e.target.value);
-    console.log(af);
-    af.classList.add()
-  }
-});
+if (path[3] == "career.html") {
+  // else {
+  af.addEventListener("change", (e) => {
+    if (e.target.value == "Others...") {
+      af.classList.remove("select-visiblity-visible");
+      af.classList.add("select-visiblity-hidden");
+      otb.classList.remove("o-tb-hidden");
+      otb.classList.add("o-tb-visible");
+      // }
+    }
+  });
+  apf.addEventListener("click", () => {
+    if (
+      af.classList.contains("select-visiblity-hidden") &&
+      otb.classList.contains("o-tb-visible")
+    ) {
+      af.classList.add("select-visiblity-visible");
+      af.classList.remove("select-visiblity-hidden");
+      otb.classList.add("o-tb-hidden");
+      otb.classList.remove("o-tb-visible");
+    } else {
+    }
+  });
+}
+
+// SomeStyling

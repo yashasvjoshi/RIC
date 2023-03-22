@@ -11,7 +11,7 @@ body{
 
 nav{
     /* visibility: hidden; */
-    width: 100vw;
+    width: 100%;
 }
 
 .options li {
@@ -19,6 +19,14 @@ nav{
     padding: 10px;
     font-family: 'Nunito', sans-serif;
 }
+
+.options{
+    visibility: hidden;
+    width: 0;
+    height: 0 ;
+}
+
+
 
 .main-img{
     display: flex;

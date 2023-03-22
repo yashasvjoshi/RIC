@@ -131,7 +131,7 @@
       <!-- Main Main Main Main Main Main -->
       <div class="career-container flex justify-center">
           <div class="career-main">
-              <form action="">
+              <form action="" enctype="multipart/form-data">
                   <div class="inputs">
                     <div class="c-row">
                         <div class="inp-c">
@@ -152,8 +152,8 @@
                             <label for="Phone">Phone</label>
                             <input type="number" name="Phone" placeholder="Phone" class="p-o-h text-area c-input">
                         </div>
-                            <div class="inp-c">
-                            <label for="ApplyFor">Apply For</label>
+                            <div class="inp-c" >
+                            <label id="ap-f" for="ApplyFor">Apply For</label>
                             <select value="Apply For" aria-placeholder="ApplyFor" id="a-f" class="p-o-h select-visiblity-visible text-area c-input">
                               <option name="sd" id="sd">Software developer</option>
                               <option name="wd" id="wd">Website developer</option>
@@ -163,7 +163,7 @@
                               <option name="o" id="o">Others...</option>
                             </select>
 
-                              <input type="text" class="p-o-h text-area c-input o-tb-hidden">
+                              <input type="text" id="o-tb" placeholder="Others..." class="p-o-h text-area c-input o-tb-hidden">
                           
                         </div>
 
@@ -193,20 +193,21 @@
                             <label for="Total Experience">Total Experience</label>
                             <select value="Total Experience" aria-placeholder="Total Experience" class="p-o-h text-area c-input">
                               <option name="1y" id="1y">1 years</option>
-                              <option name="1y" id="1y">2 years</option>
-                              <option name="1y" id="1y">3 years</option>
-                              <option name="1y" id="1y">4 years</option>
-                              <option name="1y" id="1y">5 years</option>
-                              <option name="1y" id="1y">6 years</option>
-                              <option name="1y" id="1y">7 years</option>
-                              <option name="1y" id="1y">8 years</option>
+                              <option name="2y" id="2y">2 years</option>
+                              <option name="3y" id="3y">3 years</option>
+                              <option name="4y" id="4y">4 years</option>
+                              <option name="5y" id="5y">5 years</option>
+                              <option name="6y" id="6y">6 years</option>
+                              <option name="7y" id="7y">7 years</option>
+                              <option name="8y" id="8y">8 years</option>
+                              <option name="more" id="more">More...</option>
                             </select>
                         </div>
                     </div>
                      <div class="c-row">
                         <div class="inp-c">
-                            <label for="Current Company">Current Company</label>
-                            <input type="text" name="Current Company" placeholder="Current Company" class="p-o-h text-area c-input">
+                            <label for="Current Company">Last/Current Company</label>
+                            <input type="text" name="Current Company" placeholder="Company Name" class="p-o-h text-area c-input">
                         </div>
                            <div class="inp-c">
                             <label for="Designation">Designation</label>
@@ -214,10 +215,7 @@
                         </div>
                     </div>
                      <div class="c-row">
-                        <div class="inp-c">
-                            <label for="Current Company">Current Company</label>
-                            <input type="text" name="Current Company" placeholder="Current Company" class="p-o-h text-area c-input">
-                        </div>
+                       
                             <div class="inp-c">
                             <label for="Expected CTC">Expected CTC</label>
                             <input type="text" name="Expected CTC" placeholder="Expected CTC" class="p-o-h text-area c-input">
@@ -227,7 +225,7 @@
 
                           <label for="filename">CV Upload</label><br>
                           <div class="cf">  
-                            <input type="file" id="myFile" name="filename">
+                            <input type="file" id="myFile" name="filename"  accept="">
                           </div>
                         </div>
                         <!-- <input type="text" class="p-o-h c-input"> -->

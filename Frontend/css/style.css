@@ -28,7 +28,15 @@ body{
 .arrow-d span {
     width: 100%;
     height: 100%;
+}
 
+
+.NoBorder{
+    border:none
+}
+
+.YesBorder{
+    border:.1px solid black
 }
 
 
@@ -138,7 +146,7 @@ a{
 .main-img{
     height: 60vw;
     width: 100vw;
-    margin-top: .2vh;
+    /* margin-top: .2vh; */
     border-radius: .5vh;
 }
 
@@ -162,7 +170,6 @@ nav{
 
 .components{
     background-color: white;
-    border-bottom: 1px solid black;
 }
 
 .title{
@@ -180,7 +187,7 @@ nav{
 
 #menu-btn{
     visibility: hidden;
-    margin-right: 2vw;
+    /* margin-right: 2vw; */
     flex-direction: column;
 }
 #menu-btn ul{
@@ -195,24 +202,44 @@ nav{
 @media only screen and (max-width: 920px) {
     .options ,.contact-us{
         visibility: hidden;
+        /* width: 50%; */
     }
     #menu-btn{
         visibility: visible;
         /* margin: .7vw; */
-        /* margin-right: 2vw; */
+        margin-right: 2%;
     }
+        #m-content {
+            visibility: hidden;
+            background-color: white;
+            padding:2px 2vw;
+            background-color: gray;
+
+        }
+        /* #m-content ul li {
+            visibility: visible;
+            background-color: purple;
+            padding:2px 2vw;
+
+        } */
     #menu-btn img{
-        border: .1px solid black;
+        /* border: .1px solid black; */
+        scale: .1vw;
     }}
+        .contact-us {
+            width: 95%;
+        }
+
+        .m-c-ul-a li{
+            background-color: gray;
+            border-bottom: .1px solid white;
+        }
 
 .options ul li:hover{
     font-size: 1.4vw;
 }
 
-.m-c-ul{
-    /* position: absolute;
-    display: none; */
-}
+
 
 .rtitle{
     font-size: 3vw;
@@ -704,6 +731,8 @@ nav{
 
 .select-visiblity-hidden{
     visibility: hidden;
+    display: block;
+        position: absolute;
     height: 0px;
     width: 0px;
 }
@@ -713,13 +742,13 @@ nav{
 
 .o-tb-hidden{
     visibility: hidden;
+    display: block;
+    position: absolute;
     height: 0px;
         width: 0px;
 }
 .o-tb-visible{
     visibility: visible;
-    height: 0px;
-        width: 0px;
 }
 
 .career-main{
