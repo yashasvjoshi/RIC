@@ -235,8 +235,20 @@ nav{
             border-bottom: .1px solid white;
         }
 
+        #myFile{
+            width: 18vw;
+            height: 20vw;
+            font-size: 2vw;
+        }
+
 .options ul li:hover{
     font-size: 1.4vw;
+}
+
+#myFile{
+    font-size: auto;
+    width: auto;
+        height:auto;
 }
 
 
