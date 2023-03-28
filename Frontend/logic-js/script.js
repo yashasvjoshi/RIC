@@ -37,6 +37,14 @@ if (path[3] == "contact.html") {
   document.title = ptitle + " -Career";
 } else if (path[3] == "about-us-OT.html") {
   document.title = ptitle + " -Our Team";
+} else if (path[3] == "service-Man.html") {
+  document.title = ptitle + "-Manpower Supply";
+} else if (path[3] == "service-Soft.html") {
+  document.title = ptitle + "-Software Developement";
+} else if (path[3] == "service-Web.html") {
+  document.title = ptitle + "-Web Design & Developement";
+} else if (path[3] == "service-Net.html") {
+  document.title = ptitle + "-Networking";
 }
 
 // On click in nav
@@ -52,9 +60,7 @@ if (winWidth < 920) {
       componentsBorder.classList.remove("YesBorder");
       componentsBorder.classList.add("NoBorder");
 
-      console.log(
-        
-      );
+      console.log();
     } else {
       mContent.style.height = "0px";
       mContent.style.visibility = "hidden";

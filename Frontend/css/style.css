@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@300&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -144,8 +147,8 @@ a{
 }
 
 .main-img{
-    height: 60vw;
-    width: 100vw;
+    /* height: 60vw; */
+    width:100%;
     /* margin-top: .2vh; */
     border-radius: .5vh;
 }
@@ -177,12 +180,18 @@ nav{
     font-size: 1.5vw;
     font-family: 'Oswald', sans-serif;
     margin: 0vw 2.2vw;
+    width: 40%;
 }
 
 .options ul li{
     font-size: 1.4vw;
     padding: 10px;
     font-family: 'Nunito', sans-serif;
+}
+
+.options {
+    justify-content: space-between;
+    width: 112%;
 }
 
 #menu-btn{
@@ -258,7 +267,9 @@ nav{
 }
 
 .contact-us{
-    justify-self: end;
+    /* padding-left: 60%; */
+    display: flex;
+    justify-content: end;
 }
 
 
@@ -387,7 +398,7 @@ nav{
 
 
 .slogan span{
-    font-size: 12px;
+    font-size: 14px;
     color: rgb(41 111 83);
     font-family: 'Oswald', sans-serif;
     max-width: 20px;
@@ -433,7 +444,7 @@ nav{
     padding: 3vw;
 }
 
-#s-img{
+#sn-img{
     /* border-radius: 2vw; */
     /* scale: 2; */
     height: 10vw;
@@ -487,17 +498,20 @@ nav{
 }
 
 .card-btn{
-    background-color: rgb(17, 16, 16);
+    background-color: white;
     padding: 1vw;
-    color: whitesmoke;
-    border-radius: 1vw;
+    color: black;
+    border: 1px solid black;
+    border-radius: .6vw;
+
 }
 
 .card-btn:hover{
-    background-color: rgb(240, 233, 222);
+    background-color: rgb(32, 30, 30);
     padding: 1vw;
-    color: rgb(17, 16, 16);
-    border: .6px solid rgb(17, 16, 16);
+    border-color: white;
+    color: white;
+    border: .6px solid white;
 }
 
 
@@ -603,6 +617,15 @@ nav{
         text-align: center;
         margin-bottom: 2vw;
     }
+    .card-text{
+        font-size: 2.8vw;
+    }
+    .card-title{
+        font-size: 3.2vw;
+    }
+        #heading {
+            font-size: 7vw;
+        }
 }
 
 .last{
@@ -772,7 +795,8 @@ nav{
 
 @media only screen and (max-width:915px) {
     .career-main{
-        width: 95%;
+        width: 100%;
+        /* padding:0 */
     }
 }
 
@@ -784,6 +808,8 @@ nav{
 
 .c-row{
 }
+
+
 
 
 
@@ -812,10 +838,9 @@ nav{
     margin-top: 1vw;
 }
 .btn-c{
-    background-color: rgb(8, 8, 8);
-    color: wheat;
+    background-color: white;
+    color: rgb(8, 8, 8);
     padding: 1vw;
-    border-radius: 1vw;
 }
 .btn-c:hover{
     background-color: rgb(23, 45, 32);
@@ -870,3 +895,75 @@ nav{
     }
 }
 
+.main-service-container{
+    margin: 4vw;
+    display:flex
+}
+
+#s-img{
+    height: auto;
+    width: auto;
+    /* scale: 1.3; */
+}
+
+#s-title{
+    font-size: 2vw;
+}
+
+#s-desc{
+    font-size: 1.5vw;
+}
+
+#service-text{
+font-family: 'Dosis', sans-serif;
+word-wrap: break-word;
+}
+
+
+#sidebar{
+    width: 100%;
+    background-color: #f1eaea;
+    border-radius: .4vw;
+    height: fit-content;
+}
+
+.s-li-head{
+padding: 1vw;
+background-color: rgb(14, 13, 13);
+color: whitesmoke;
+font-size: 2vw;
+    /* border-radius: .4vw; */
+    font-family: 'Pathway Gothic One', sans-serif;
+}
+
+.s-li-elements{
+    font-size: medium;
+font-family: 'Sarabun', sans-serif;
+    padding: 1vw;
+    border-bottom: .1vw solid black;
+    font-weight: 300;
+
+}
+
+@media only screen and (max-width: 920px) {
+    .main-service-container {
+            margin: 4vw;
+            flex-direction: column;
+        }
+        #s-title{
+            font-size: 5vw;
+        }
+        #s-desc{
+            font-size: 4vw;
+        }
+        #sidebar{
+            margin-top: 2vw;
+        }
+
+        .s-li-head{
+            font-size: 5vw;
+        }
+        .s-li-elements{
+            font-size: 3vw;
+        }
+}

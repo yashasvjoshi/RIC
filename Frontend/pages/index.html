@@ -19,6 +19,7 @@
 
 <body>
     <script src="../logic-js/script.js" defer></script>
+    <script src="../logic-js/Cards.js" defer></script>
 
     <div class="contact-info flex text-white bg-gray-800">
         <div class="container flex">
@@ -72,12 +73,11 @@
                                     arrow_downward
                                 </span></li>
                             <ul id="s-dropdown">
-                                <li><a href=''>Development</a></li>
-                                <li><a href=''>Wev Developm</a>ent</li>
-                                <li><a href=''> Development</a></li>
-                                <li><a href=''> Development</a></li>
-                                <li><a href=''> Development</a></li>
-                            </ul>
+                    <li><a href="./service-Net.html" target="_blank">Networking</a></li>
+                    <li><a href="./service-Web.html" target="_blank">Website Design & Development</a></li>
+                    <li><a href="./service-Soft.html" target="_blank">Software Developement</a></li>
+                    <li><a href="./service-Man.html" target="_blank">Manpower Outsourcing</a></li>
+                </ul>
 
                         </div>
                         <li><a href='./career.html'>Career</a></li>
@@ -106,7 +106,7 @@
         </div>
 
     <div class="main-img-container">
-        <img src="https://phrs-hrd.com/images/slider-bg1.jpg" class="main-img" alt="">
+        <img src="../css/images/M-Img/forRIC_2.png" class="main-img" alt="">
     </div>
     </div>
     <div class="about-services">
@@ -172,7 +172,7 @@
                 </div>
             </div>
             <div class="ino-img">
-                <img id="s-img" src="../css/images/logos/ino.jpg" alt="">
+                <img id="sn-img" src="../css/images/logos/ino.jpg" alt="">
             </div>
         </div>
     </div>
@@ -182,94 +182,18 @@
 
             <h1 id="heading">Our Services</h1>
         </div>
-        <div class="cards row-span-card">
-            <div class="row">
-                <div class="card">
-                    <div class="card-img">
-                        <img src="https://phrs-hrd.com/images/service07.jpg" alt="">
-                    </div>
-                    <div class="card-title">Payroll Management</div>
-                    <div class="card-text">Payroll can be one of the most time consuming tasks for an employer. Between
-                        entering employee data, keeping it up to
-                        date, ongoing processing and reconciling with other...</div>
-                    <div class="card-c-btn">
-                        <a href=""><button class="card-btn">Read More</button></a>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-img">
-                        <img src="https://phrs-hrd.com/images/service07.jpg" alt="">
-                    </div>
-                    <div class="card-title">Payroll Management</div>
-                    <div class="card-text">Payroll can be one of the most time consuming tasks for an employer. Between
-                        entering employee data, keeping it up to
-                        date, ongoing processing and reconciling with other...</div>
-                    <div class="card-c-btn">
-                        <a href=""><button class="card-btn">Read More</button></a>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-img">
-                        <img src="https://phrs-hrd.com/images/service07.jpg" alt="">
-                    </div>
-                    <div class="card-title">Payroll Management</div>
-                    <div class="card-text">Payroll can be one of the most time consuming tasks for an employer. Between
-                        entering employee data, keeping it up to
-                        date, ongoing processing and reconciling with other...</div>
-                    <div class="card-c-btn">
-                        <a href=""><button class="card-btn">Read More</button></a>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="card">
-                    <div class="card-img">
-                        <img src="https://phrs-hrd.com/images/service07.jpg" alt="">
-                    </div>
-                    <div class="card-title">Payroll Management</div>
-                    <div class="card-text">Payroll can be one of the most time consuming tasks for an employer. Between
-                        entering employee data, keeping it up to
-                        date, ongoing processing and reconciling with other...</div>
-                    <div class="card-c-btn">
-                        <a href=""><button class="card-btn">Read More</button></a>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-img">
-                        <img src="https://phrs-hrd.com/images/service07.jpg" alt="">
-                    </div>
-                    <div class="card-title">Payroll Management</div>
-                    <div class="card-text">Payroll can be one of the most time consuming tasks for an employer. Between
-                        entering employee data, keeping it up to
-                        date, ongoing processing and reconciling with other...</div>
-                    <div class="card-c-btn">
-                        <a href=""><button class="card-btn">Read More</button></a>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-img">
-                        <img src="https://phrs-hrd.com/images/service07.jpg" alt="">
-                    </div>
-                    <div class="card-title">Payroll Management</div>
-                    <div class="card-text">Payroll can be one of the most time consuming tasks for an employer. Between
-                        entering employee data, keeping it up to
-                        date, ongoing processing and reconciling with other...</div>
-                    <div class="card-c-btn">
-                        <a target="_blank" href="http://rajyashit.in"><button class="card-btn">Read More</button></a>
-                    </div>
-                </div>
-            </div>
+        <div class="cards row-span-card" id="cards">
+           
+              
+        
 
             <div class="row">
-                <div class="card">
+                <!-- <div class="card">
                     <div class="card-img">
                         <img src="https://phrs-hrd.com/images/service07.jpg" alt="">
                     </div>
-                    <div class="card-title">Payroll Management</div>
-                    <div class="card-text">Payroll can be one of the most time consuming tasks for an employer. Between
-                        entering
-                        employee data, keeping it up to
-                        date, ongoing processing and reconciling with other...</div>
+                    <div class="card-title">Software Developement</div>
+                    <div class="card-text">Software development is the process of conceiving, specifying, designing, programming, documenting, testing, and bug fixing involved in creating and maintaining applications, frameworks, or other software components. Software development involves writing and maintaining the source code, but in a broader sense, it includes all processes from the conception of the desired software through to the final manifestation of the software, typically in a planned and structured process. Software development also includes research, new development, prototyping, modification, reuse, re-engineering, maintenance, or any other activities that result in software products.</div>
                     <div class="card-c-btn">
                         <a target="_blank" href="http://rajyashit.in"><button class="card-btn">Read More</button></a>
                     </div>
@@ -278,16 +202,15 @@
                     <div class="card-img">
                         <img src="https://phrs-hrd.com/images/service07.jpg" alt="">
                     </div>
-                    <div class="card-title">Payroll Management</div>
-                    <div class="card-text">Payroll can be one of the most time consuming tasks for an employer. Between
-                        entering
-                        employee data, keeping it up to
-                        date, ongoing processing and reconciling with other...</div>
+                    <div class="card-title">Web Developement</div>
+                    <div class="card-text">Web development is the work involved in developing a website for the Internet (World Wide Web) or an intranet (a private network).[1] Web development can range from developing a simple single static page of plain text to complex web applications, electronic businesses, and social network services. A more comprehensive list of tasks to which Web development commonly refers, may include Web engineering, Web design, Web content development, client liaison, client-side/server-side scripting, Web server and network security configuration, and e-commerce development.</div>
                     <div class="card-c-btn">
                         <a target="_blank" href="http://rajyashit.in"><button class="card-btn">Read More</button></a>
                     </div>
                 </div>
-            </div>
+            -->
+            </div> 
+            <div class="row"></div>
 
 
         </div>
@@ -303,12 +226,10 @@
             <div class="o-c-component my-2">
                 <img src="../css/images/clients/vyash_group_logo.jpg" alt="" class="o-c-img">
                 <div class="o-c-name">Vyash Group</div>
-                <a><button class="o-c-btn">Know More</button></a>
             </div>
             <div class="o-c-component">
                 <img src="../css/images/clients/GLOBAL_BAG_LOGO.png" alt="" class="o-c-img">
                 <div class="o-c-name">GLOBAL BAG</div>
-                <a><button class="o-c-btn">Know More</button></a>
             </div>
         </div>
     </div>
@@ -334,13 +255,10 @@
             </div>
             <div class="c-us flex-col justify-center">
                 <ul>
-                    <li><a>Audits of Statutory Compliances</a></li>
-                    <li><a>Payroll Management</a></li>
-                    <li><a>Compliance Management</a></li>
-                    <li><a>Manpower Outsourcing</a></li>
-                    <li><a>Consulting & Advisory</a></li>
-                    <li><a>TDS</a></li>
-                    <li><a>HR Audit</a></li>
+                    <li><a href="./service-Net.html" target="_blank">Networking</a></li>
+                    <li><a href="./service-Web.html" target="_blank">Website Design & Development</a></li>
+                    <li><a href="./service-Soft.html" target="_blank">Software Developement</a></li>
+                    <li><a href="./service-Man.html" target="_blank">Manpower Outsourcing</a></li>
                 </ul>
             </div>
         </div>
