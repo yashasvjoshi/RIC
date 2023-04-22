@@ -44,7 +44,7 @@ let cardsContent = [
   },
   {
     service: "Web Design & Developement",
-    desc: "Our company specializes in web development and design services that help businesses create a powerful online presence. We understand that a well-designed and user-friendly website is essential for attracting and engaging customers, building brand awareness, and driving conversions.<br>Our team of experienced developers and designers works collaboratively with our clients to create custom websites that meet their unique needs and objectives. We follow a comprehensive development process that includes planning, design, development, testing, and deployment, ensuring that we deliver websites that are optimized for performance, security, and search engine optimization.<br>We have expertise in a wide range of web development and design technologies, including HTML, CSS, JavaScript, WordPress, and more. Whether you need a simple brochure website or a complex e-commerce platform, we have the skills and knowledge to deliver solutions that exceed your expectations.<br>Partner with us for your web development and design needs and experience the benefits of having a responsive and professional website that helps you achieve your business goals.m/dQa9HFLdViQtSe8JQ3WuSNl9ih1tRyiIAdzvs99aDKw/rs:fit:678:225:1/g:ce/aHR0cHM6Ly90c2Ux/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC54/aV9WWTU0VjUzNWh6/dEh6MTFWVHlRSGFG/TCZwaWQ9QXBp",
+    desc: "Our company specializes in web development and design services that help businesses create a powerful online presence. We understand that a well-designed and user-friendly website is essential for attracting and engaging customers, building brand awareness, and driving conversions.<br>Our team of experienced developers and designers works collaboratively with our clients to create custom websites that meet their unique needs and objectives. We follow a comprehensive development process that includes planning, design, development, testing, and deployment, ensuring that we deliver websites that are optimized for performance, security, and search engine optimization.<br>We have expertise in a wide range of web development and design technologies, including HTML, CSS, JavaScript, WordPress, and more. Whether you need a simple brochure website or a complex e-commerce platform, we have the skills and knowledge to deliver solutions that exceed your expectations.<br>Partner with us for your web development and design needs and experience the benefits of having a responsive and professional website that helps you achieve your business goals.",
 
     imgURL:
       "https://imgs.search.brave.com/dQa9HFLdViQtSe8JQ3WuSNl9ih1tRyiIAdzvs99aDKw/rs:fit:678:225:1/g:ce/aHR0cHM6Ly90c2Ux/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC54/aV9WWTU0VjUzNWh6/dEh6MTFWVHlRSGFG/TCZwaWQ9QXBp",
@@ -127,15 +127,13 @@ let cardBtns = document.querySelectorAll(".card-btn");
 //   });
 // });
 
-if (window.location.pathname.split("/")[3].split(".")[0] == "service-Web") {
+ if (window.location.pathname.split("/")[3].split(".")[0] == "service-Web") {
   // Getting all elements we need
   let sImg = document.getElementById("s-img");
   let sDesc = document.getElementById("s-desc");
   let sTitle = document.getElementById("s-title");
-  // console.log(TempClassName);
   sTitle.innerHTML = cardsContent[1].service;
   sDesc.innerHTML = cardsContent[1].desc;
-  // console.log(sImg);
   sImg.setAttribute("src", cardsContent[1].imgURL);
 } else if (
   window.location.pathname.split("/")[3].split(".")[0] == "service-Soft"
@@ -144,7 +142,6 @@ if (window.location.pathname.split("/")[3].split(".")[0] == "service-Web") {
   let sImg = document.getElementById("s-img");
   let sDesc = document.getElementById("s-desc");
   let sTitle = document.getElementById("s-title");
-  // console.log(TempClassName);
   sTitle.innerHTML = cardsContent[0].service;
   sDesc.innerHTML = cardsContent[0].desc;
   // console.log(sImg);
