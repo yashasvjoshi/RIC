@@ -46,6 +46,9 @@ if (path[3] == "contact.html") {
 } else if (path[3] == "service-Net.html") {
   document.title = ptitle + "-Networking";
 }
+ else if (path[3] == "phone-services.html") {
+  document.title = ptitle + "-Services";
+}
 
 // On click in nav
 
@@ -102,5 +105,3 @@ if (path[3] == "career.html") {
     }
   });
 }
-
-// SomeStyling

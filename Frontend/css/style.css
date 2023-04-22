@@ -233,7 +233,8 @@ nav{
         } */
     #menu-btn img{
         /* border: .1px solid black; */
-        scale: .1vw;
+        height: 9vw;
+        width: 30vw;
     }}
         .contact-us {
             width: 95%;

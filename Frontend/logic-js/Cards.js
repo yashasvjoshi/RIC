@@ -87,7 +87,7 @@ let rows = Array.from(document.getElementsByClassName("row"));
 //   });
 // });
 
-if (window.location.pathname.split("/")[3].split(".")[0] == "index") {
+if (window.location.pathname.split("/")[3].split(".")[0] ==( "index")||window.location.pathname.split("/")[3].split(".")[0] =="phone-services") {
   cardsContent.forEach((cardContent, index) => {
     if (index == 0 || index == 1) {
       rows[0].innerHTML += `    ${cardTemp(
