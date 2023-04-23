@@ -24,18 +24,7 @@ imgTS:"https://avatars.githubusercontent.com/u/44340561?v=4"
 ];
 
 
-pcardTemp = `  <div class="p-card"> 
-<div class="p-img">
- <img src="https://avatars.githubusercontent.com/u/115701902?s=400&u=a0a6945336e81335f27833bb88057f1bc94c293c&v=4" alt="">
-</div>
-<div class="p-name">yashav joshi</div>
-<!-- <div class="p-desc">the best</div> -->
-<div class="p-c-icons"><ul class="p-c-icon-c">
- <li class="p-c-icon"><img src="../css/images/logos/twitter.png" alt="twitter"></li>
- <li class="p-c-icon"><img src="../css/images/logos/github.jpg" alt="github"></li>
-</ul></div>
-</div>
-`;
+
 
 const inserter = ()=>{
     teamMeambers.forEach(member => { 

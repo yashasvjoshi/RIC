@@ -222,7 +222,7 @@ nav{
             visibility: hidden;
             background-color: white;
             padding:2px 2vw;
-            background-color: gray;
+            background-color: cyan;
 
         }
         /* #m-content ul li {
@@ -233,15 +233,15 @@ nav{
         } */
     #menu-btn img{
         /* border: .1px solid black; */
-        height: 9vw;
-        width: 30vw;
+        height: 6vw;
+        width: 18vw;
     }}
         .contact-us {
             width: 95%;
         }
 
         .m-c-ul-a li{
-            background-color: gray;
+            background-color: cyan;
             border-bottom: .1px solid white;
         }
 
@@ -995,6 +995,7 @@ font-family: 'Sarabun', sans-serif;
     font-size: 2vw;
 }
 
+
 .p-c-icon{
     max-width: 2vw;
     margin: .3vw;
@@ -1008,6 +1009,14 @@ border-radius: 1vw;}
 
 #our-team-head span{
     font-size: 5vw;
+    font-family:'Courier New', Courier, monospace;
+}
+#our-team-head {
+    /* font-size: 5vw;
+    font-family:'Courier New', Courier, monospace; */
+    margin-top: 2vw;
+    background-color: rgb(240, 225, 205);
+    padding: 1.5vw;
 }
 
 #main{
@@ -1015,6 +1024,8 @@ border-radius: 1vw;}
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: rgb(231, 226, 219);
+    margin: .01vw 1vw;
 }
 @media only screen and (max-width: 920px) {
     #main-o-au{
@@ -1025,7 +1036,7 @@ border-radius: 1vw;}
     }
     .p-card{
         background-color: rgb(200, 200, 200);
-        width: 95%;
+        width: auto;
         height: auto;
         margin: 2vw;
         padding: 1vw;
@@ -1035,4 +1046,21 @@ border-radius: 1vw;}
         align-items: center;
         border-radius: .1vw;
     }
+    /* border-radius: 12vw; */
+    .p-img{
+        max-width: 50vw;
+        max-height: 50vw;
+    }
+    .p-name{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 4vw;
+    }
+    .p-c-icon{
+        max-width: 50vw;
+        margin: .3vw;
+    }
+    .p-c-icon img{
+        border-radius: 3vw;
+    width: 6vw;
+}   
 }
