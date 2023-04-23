@@ -678,7 +678,7 @@ nav{
     font-size: 1.9vw;
 }
 
-@media only screen and (max-width: 915px) {
+@media only screen and (max-width: 920px){
     .C-head{
         font-size: 3vw;
     }
@@ -873,6 +873,7 @@ nav{
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    /* justify-content: space-between;word-wrap: break-word; */
 }
 
 
@@ -882,18 +883,28 @@ nav{
     border: 1px solid black;
     white-space: nowrap;
     padding: 1vw;
+    /* width: 30%; */
+    /* height: 60%; */
+    display: flex;
+    justify-content: center;
+}
+.clint-container img{
+    /* justify-content: center; */
+    max-width: 6vw;;
+    max-height: 6vw;;
 }
 
-@media screen and (min-width:915px) {
+@media only screen and (max-width: 920px){
     .clint-container{
         width: 95%;
-        flex-direction: column;
-        flex-wrap: nowrap;
+        height: 95%;
+        justify-content: center;
+        display: flex;
     }
-    .clint-container{
+    /* .clint-container{
         width: 100%;
         
-    }
+    } */
 }
 
 .main-service-container{
@@ -1017,6 +1028,8 @@ border-radius: 1vw;}
     margin-top: 2vw;
     background-color: rgb(240, 225, 205);
     padding: 1.5vw;
+    display: flex;
+    justify-content: center;
 }
 
 #main{
