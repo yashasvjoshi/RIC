@@ -872,7 +872,7 @@ nav{
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
     /* justify-content: space-between;word-wrap: break-word; */
 }
 
@@ -885,6 +885,7 @@ nav{
     padding: 1vw;
     /* width: 30%; */
     /* height: 60%; */
+    /* max-width: 10%; */
     display: flex;
     justify-content: center;
 }
