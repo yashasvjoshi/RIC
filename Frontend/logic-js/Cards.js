@@ -221,13 +221,12 @@ const AddCardsToRows = ()=>{
 
 
 
-// if (window.location.pathname.split("/")[3].split(".")[0] ==("index")||window.location.pathname.split("/")[3].split(".")[0] =="phone-services") {
-//   AddCardsToRows()
-// }
-// else
- if (window.location.pathname.split("Frontend")[1]==("/pages/")) {
+if (window.location.pathname.split("/")[3].split(".")[0] ==("index")||window.location.pathname.split("/")[3].split(".")[0] =="phone-services") {
   AddCardsToRows()
 }
+// else if (window.location.pathname.split("Frontend")[1]==("/pages/")||window.location.pathname.split("Frontend")[1]==("/pages/index.html")) {
+//   AddCardsToRows()
+// }
 
 let cardBtns = document.querySelectorAll(".card-btn");
 

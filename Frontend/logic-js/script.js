@@ -2,30 +2,31 @@
 
 let ptitle = "RAJYASH IT CONSULTENCY ";
 let path = document.location.pathname.split("/");
+let sideSerBarEle = document.querySelector("#sidebar");
 
 
-
-/*-------------------Err init-----------------------------------------------------------------------
+// /*-------------------Err init-----------------------------------------------------------------------
 // Creating the Right Service NavBar.
 console.log("ON way");
 sideSerBarEle.innerHTML = `
-<ul id="s-options">
-<li class="s-li-head">Serveices</li>
-<a id="side-nav-SD" href="./service-Soft.html"><li class="s-li-elements">Software Developement</li></a>
-<a id="side-nav-WDD" href="./service-Web.html"><li class="s-li-elements">Website Design & Developement</li></a>
-<a id="side-nav-CN" href="./service-Net.html"><li class="s-li-elements">Computer Networking</li></a>
-<a id="side-nav-MS" href="./service-Man.html"><li class="s-li-elements">Manpower Supply</li></a>
-<a id="side-nav-CSC" href="./service-CSC.html">     <li class="s-li-elements">Customer Support Center</a></li>
-<a id="side-nav-CE" href="./service-CE.html">      <li class="s-li-elements">Computer Education</a></li>
-<a id="side-nav-ConSer" href="./service-ConSer.html">  <li class="s-li-elements">Consultancy Services</a></li>
-<a id="side-nav-EA" href="./service-ERP_App.html"> <li class="s-li-elements">ERP Applications</a></li>
-<a id="side-nav-CS" href="./service-CS.html" >      <li class="s-li-elements">Computer Stationery</a></li>
-</ul>
+  </ul>
+  <ul id="s-options">
+    <li class="s-li-head">Serveices</li>
+    <a href="./service-Soft.html"><li class="s-li-elements">Software Developement</li></a>
+    <a href="./service-Web.html"><li class="s-li-elements">Website Design &amp; Developement</li></a>
+    <a href="./service-Net.html"><li class="s-li-elements">Computer Networking</li></a>
+    <a href="./service-Man.html"><li class="s-li-elements">Manpower Supply</li></a>
+    <a href="./service-CSC.html"><li class="s-li-elements">Customer Support Center</li></a>
+    <a href="./service-ConSer.html"><li class="s-li-elements">Consultancy Services</li></a>
+    <a href="./service-CE.html"><li class="s-li-elements">Computer Education</li></a>
+    <a href="./service-ERP_App.html"><li class="s-li-elements">ERP Applications</li></a>
+    <a href="./service-CS.html"><li class="s-li-elements">Computer Stationery</li></a>
+  </ul>
 `
 console.log(sideSerBarEle.innerHTML);
 console.log("N bang");
 
--------------------Err init-----------------------------------------------------------------------*/
+// -------------------Err init-----------------------------------------------------------------------*/
 document.head = document.head || document.getElementsByTagName("head")[0];
 
 let winWidth = window.screen.width;
