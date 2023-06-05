@@ -161,7 +161,7 @@
           <div class="wf map justify-center flex">
             <iframe src="https://www.google.com/maps/d/u/1/embed?mid=1oZiU4OHJKrI2wdTm7LFjP6wQtxTEECU&ehbc=2E312F" id="a-map" width="640" height="480"></iframe>
           </div>
-          <form action="/feedback" method="post" class="formSty">
+          <form id="conForm" class="formSty">
           <div class="wf feedback">
 <div class="wf row">
 <div class="wf text-c flex justify-center text-center">
@@ -171,21 +171,23 @@
 </div>
               <div class="wf row flex justify-center">
 
-            <input type="text" class="wf text-area" placeholder="Your Name">
-            <input type="text" class="wf text-area" placeholder="Your Email">
+            <input type="text" class="wf feedback-inputs text-area" placeholder="Your Name">
+            <input type="text" class="wf feedback-inputs text-area" placeholder="Your Email">
           </div> 
           <div class="wf row"> 
-            <input type="text" class="wf text-area" placeholder="Phone No.">
-            <input type="text" class="wf text-area" placeholder="Subject">
+            <input type="text" class="wf feedback-inputs text-area" placeholder="Phone No.">
+            <input type="text" class="wf feedback-inputs text-area" placeholder="Subject">
           </div>
           <div class="wf row">
 
-            <textarea type="text" class="wf text-area-l" style="text-align: left;"  placeholder="Message"></textarea>
+            <textarea type="text" class="wf feedback-inputs text-area-l" style="text-align: left;"  placeholder="Message"></textarea>
           </div>
+            <br>
+            <center><p id="empty-warning" style="visibility: hidden;">No empty inputs Allowed</p></center>
           </div>
           <div class="btn">
 
-            <button type="submit" class="submit-btn" value="Submit">Submit</button>
+            <button type="button" class="submit-btn" id="conSubBtn" value="Submit">Submit</button>
           </div>
         </form>
         </div>
@@ -216,6 +218,11 @@
             <li><a href="./service-Web.html" target="_blank">Website Design & Development</a></li>
             <li><a href="./service-Soft.html" target="_blank">Software Developement</a></li>
             <li><a href="./service-Man.html" target="_blank">Manpower Outsourcing</a></li>
+            <li><a href="./service-CSC.html" target="_blank">Customer Support Center</a></li>
+            <li><a href="./service-CE.html" target="_blank">Computer Education</a></li>
+            <li><a href="./service-ConSer.html" target="_blank">Consultancy Services</a></li>
+            <li><a href="./service-ERP_App.html" target="_blank">ERP Applications</a></li>
+            <li><a href="./service-CS.html" target="_blank">Computer Stationery</a></li>
         </ul>
         </div>
     </div>
