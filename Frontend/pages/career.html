@@ -23,62 +23,11 @@
     
   </head>
   <body>
+    <script src="https://unpkg.com/axios/dist/axios.min.js" defer></script> 
     
 
-    <div class="contact-info flex text-white bg-gray-800">
-      <div class="container flex">
-        <div class="info flex items-center">
-          <div class="m-number items-center flex">
-            <img
-              class="call-icon"
-              src="../css/images/logos/Call-icon.png"
-              alt=""
-            />
-            <span class="align-middle">(+91) 8441933833</span>
-          </div>
-          <div class="email flex items-center">
-            <img class="m-img" src="../css/images/logos/mail.jpg" alt="Mail" />
-            <span id="mail-id" class="ml-2">rajyashit@gmail.com</span>
-          </div>
-        </div>
-        <div class="imgs flex justify-self-end">
-          <ul class="flex">
-            <li>
-              <a href=""
-                ><img
-                  src="../css/images/logos/fb.png"
-                  class="image mx-2"
-                  alt="fb"
-              /></a>
-            </li>
-            <li>
-              <a href=""
-                ><img
-                  src="../css/images/logos/insta.png"
-                  class="image mx-2"
-                  alt="insta"
-              /></a>
-            </li>
-            <li>
-              <a href="https://twitter.com/rajyashit"
-              target="_blank"
-                ><img
-                  src="../css/images/logos/twitter.png"
-                  class="image mx-2"
-                  alt="twitter"
-              /></a>
-            </li>
-            <li>
-              <a href=""
-                ><img
-                  src="../css/images/logos/in.png"
-                  class="image mx-2"
-                  alt="linked-in"
-              /></a>
-            </li>
-          </ul>
-        </div>
-      </div>
+    <div class="contact-info flex text-white bg-gray-800" id="contact-info">
+      
     </div>
     <div class="navbar">
      <nav class="sticky ">
@@ -137,7 +86,7 @@
       <!-- Main Main Main Main Main Main -->
       <div class="career-container flex justify-center">
           <div class="career-main">
-              <form action="" enctype="multipart/form-data">
+              <form id="career-form" enctype="multipart/form-data">
                   <div class="inputs">
                     <div class="c-row">
                         <div class="inp-c">
@@ -164,8 +113,8 @@
                               <option name="sd" id="sd">Software developer</option>
                               <option name="wd" id="wd">Website developer</option>
                               <option name="ad" id="ad">Android developer</option>
-                              <option name="co" id="co">Computer oprator</option>
-                              <option name="dfo" id="dfo">Data feeding oprator</option>
+                              <option name="co" id="co">Computer operator</option>
+                              <option name="dfo" id="dfo">Data feeding operator</option>
                               <option name="o" id="o">Others...</option>
                             </select>
 
@@ -235,14 +184,16 @@
 
                           <label for="filename">CV Upload</label><br>
                           <div class="cf">  
-                            <input type="file" id="myFile" name="filename"  accept="">
+                            <input type="file" id="career-file" name="filename"  accept=".doc,.docx,.pdf">
                           </div>
                         </div>
                         <!-- <input type="text" class="p-o-h c-input"> -->
                     </div>
-                    
+                    <div id="empty-warning-career">
+                      <span>Some Error Occured, Try again!</span>
+                    </div>
                     <div class="btn-c-c">
-                        <button class="btn-c">Send Message</button>
+                        <button class="btn-c" id="career-sub-btn">Submit</button>
                     </div>
                 </div>
             </form>
@@ -299,7 +250,7 @@
         <div class="r-o-s">
             <h1 class="r-our-services-components-head">NEED HELP</h1>
         </div>
-        <div class="c-us flex-col justify-center">
+        <div class="c-us flex-col justify-center" id="need-help-cont">
             <ul>
                 <li><a>+91-8441933833</a></li>
                 <li><a>Compliance Management</a></li>

@@ -1,14 +1,313 @@
-// const { text } = require("express");
+// const axios = require("axios");
+
+// const { default: axios } = require("axios");
 
 let ptitle = "RAJYASH IT CONSULTENCY ";
 let path = document.location.pathname.split("/");
 let sideSerBarEle = document.querySelector("#sidebar");
+let contcact_post_request_data;
+
+try {
+  
+  let contactInfoCon = document.getElementById('contact-info')
+  
+  
+  
+contactInfoCon.innerHTML=`<div class="container flex">
+<div class="info flex items-center">
+<a href="tel:844-193-3833" class="flex align-center">
+  <div class="m-number items-center flex">
+  <img
+  class="call-icon"
+  src="../css/images/logos/Call-icon.png"
+  alt=""
+  />
+  <span class="align-middle">(+91) 8441933833</span>
+  </div>
+  </a>
+  <a href="mailto:rajyashit@gmail.com" class="flex align-center">
+  <div class="email flex items-center">
+  <img class="m-img" src="../css/images/logos/mail.jpg" alt="Mail" />
+    <span id="mail-id" class="ml-2">rajyashit@gmail.com</span>
+    </div>
+    </a>
+</div>
+<div class="imgs flex justify-self-end">
+<ul class="flex">
+    <li>
+      <a href="https://www.facebook.com/profile.php?id=100093508664646" target="_blank"
+      ><img
+          src="../css/images/logos/fb.png"    
+          class="image mx-2"
+          alt="fb"
+      /></a>
+    </li>
+    <li>
+    <a href=""    target="_blank"
+    ><img
+          src="../css/images/logos/insta.png"
+          class="image mx-2"
+          alt="insta"
+          /></a>
+    </li>
+    <li>
+      <a href="https://twitter.com/rajyashit"
+      target="_blank"
+        ><img
+          src="../css/images/logos/twitter.png"
+          class="image mx-2"
+          alt="twitter"
+          /></a>
+    </li>
+    <li>
+      <a href=""    target="_blank"
+        ><img
+        src="../css/images/logos/in.png"
+        class="image mx-2"
+          alt="linked-in"
+          /></a>
+    </li>
+  </ul>
+</div>
+</div>`
+
+} catch (error) {
+ console.log(error); 
+}
+
+
+let needHelpCont = document.getElementById('need-help-cont')
+
+needHelpCont.innerHTML = `<ul>
+<li><a href="tel:844-193-3833">+91-8441933833</a></li>
+<li><a href="">Compliance Management</a></li>
+<li><a href="https://rajyashit.in">www.rajyashit.in</a></li>
+<li><a href="mailto:info@rajyashit.in">info@rajyashit.in</a></li>
+</ul>`
+
+
+
+try {
+} catch (error) {
+  console.log(error);
+}
+try {
+  let subBtn = document.querySelector('#conSubBtn')
+  
+  subBtn.addEventListener('click',e=>{
+    // alert("YJITB")
+    ContactFormSender(e)
+  })
+} catch (error) {
+  console.log(error);
+}
+  
+// }
+
+
+// This function is to store Contact Form data in database
+
+
+const ContactFormSender =async (e)=>{
+  let emptyWarning = document.querySelector('#empty-warning')
+  let feedback_obj = {name:null,email:null,phone_no:null,subject:null,message:null}
+  let feedback_inputs = Array.from(document.querySelectorAll('.feedback-inputs'))
+  feedback_inputs.forEach((input,index)=>{
+    if (input.value != ''){
+      
+      if (index==0){
+        feedback_obj.name = input.value;
+      }
+      else if (index==1){
+        feedback_obj.email = input.value;
+      }
+      else if (index==2){
+        feedback_obj.phone_no = Number.parseInt(input.value);
+      }
+      else if (index==3){
+        feedback_obj.subject = input.value;
+      }
+      else if (index==4){
+        feedback_obj.message = input.value;
+      }
+      
+      // // console.log(feedback_obj)
+    }
+    else{
+      emptyWarning.style.visibility = 'visible'
+      setTimeout(()=>{
+        emptyWarning.style.visibility = 'hidden'
+      },1800)
+    }
+  })
+  
+  // post request using fetch
+  
+  let response = axios.post('http://localhost:7777/contact', feedback_obj)
+  .then(async(response) => {
+    return response.data
+  }).then((data)=>{
+    
+    if (data.hasOwnProperty("errors")){
+      emptyWarning.style.visibility = 'visible'
+      emptyWarning.innerHTML = data.errors[0].msg
+      setTimeout(()=>{
+        emptyWarning.style.visibility = 'hidden'
+      },1800)
+      if (data.errors[0].hasOwnProperty('AE')) {
+        if (Object.keys(data.errors[0].AE.keyValue)[0]=="email") {
+          emptyWarning.innerHTML = "The given Email Already Exists."
+        }
+        else if(Object.keys(data.errors[0].AE.keyValue)[0]=="phone_no"){
+          emptyWarning.innerHTML = "The given Phone Number Already Exists."
+        }
+      }
+    }
+    else{
+      emptyWarning.innerHTML = "Message Successfully Sent!"
+      setTimeout(()=>{
+        emptyWarning.style.visibility = 'visible'
+      },1800)
+      emptyWarning.style.visibility = 'visible'
+    }
+  })
+}
+  
+  
+
+
+
+
+
+
+
+// Submiting form of Career page -Post Request 
+try {
+  let CareerSubBtn = document.querySelector('#career-sub-btn')
+  CareerSubBtn.addEventListener("click",e=>{
+    e.preventDefault()
+    CareerFormSender(e)
+    // console.log(CareerForm);
+  })
+} catch (error) {
+  console.log(error);
+}
+
+const CareerFormSender = async(e)=>{
+  let emptyWarning = document.querySelector('#empty-warning-career')
+  // emptyWarning.style.visibility = 'visible'
+  let formData = new FormData()
+  let CareerInputElements = Array.from(document.querySelectorAll('.p-o-h'))
+  let CareerFileInput = document.querySelector('#career-file')
+  // console.log(CareerFileInput.files[0]);
+  formData.append('cv_upload',CareerFileInput.files[0])
+  let applyFor;
+  CareerInputElements.forEach((inputElement,index)=>{
+    switch (index) {
+      case 0:
+        formData.append("name",inputElement.value)
+        break;
+      case 1:
+        formData.append("dob",inputElement.value)
+        break;
+      case 2:
+        formData.append("email",inputElement.value)
+        break;
+      case 3:
+        formData.append("phone_no",inputElement.value)
+        break;
+      case 4:
+        applyFor = inputElement.value
+          break;
+      case 5:
+        if(applyFor == "Others..."){
+          applyFor = inputElement.value
+        }
+        else{
+        }
+        // console.log(inputElement.value);
+        formData.append("apply_for",applyFor)
+        break;
+      case 6:
+        formData.append("message",inputElement.value)
+        break;
+      case 7:
+        formData.append("state",inputElement.value)
+        break;
+      case 8:
+        formData.append("city",inputElement.value)
+        break;
+      case 9:
+        formData.append("educational_qualification",inputElement.value)
+        break;
+      case 10:
+        formData.append("total_experience",inputElement.value)
+        break;
+      case 11:
+        formData.append("lc_company",inputElement.value)
+        break;
+      case 12:
+        formData.append("designation",inputElement.value)
+        break;
+      case 13:
+        formData.append("lc_ctc",inputElement.value)
+        break;
+      case 14:
+        formData.append("expected_ctc",inputElement.value)
+        break;
+    
+      default:
+        break;
+    }
+  })
+  // console.log(formData);
+  // for (var key of formData.entries()) {
+  //   console.log(key[0] + ', ' + key[1])
+  // }
+
+let careerData;
+try{
+
+  // Send Data to DB using Post Request -axios
+  let CareerRes = await axios.post('http://localhost:7777/career',formData,{
+    headers: {
+      'Content-Type': 'multipart/form-data'
+    }
+  }).then((data)=>{
+    careerData = data.data
+    console.log(careerData);
+  })
+  if (careerData.hasOwnProperty("ERROR")||careerData.hasOwnProperty("errors")){
+  // CareerRes = await CareerRes.json()
+  
+  }
+  else{
+  emptyWarning.innerHTML = "Successfully Uploaded!"
+  setTimeout(()=>{
+    emptyWarning.style.visibility = 'hidden'
+  },1800)
+  emptyWarning.style.visibility = 'visible'
+  }
+}
+  catch(err){emptyWarning.innerHTML='Some Error Occured Plrase Try again Later'}
+
+
+}
+
+
+
+
+
+
+
 
 
 // /*-------------------Err init-----------------------------------------------------------------------
 // Creating the Right Service NavBar.
-console.log("ON way");
-sideSerBarEle.innerHTML = `
+// console.log("ON way");
+try {
+  
+  sideSerBarEle.innerHTML = `
   </ul>
   <ul id="s-options">
     <li class="s-li-head">Serveices</li>
@@ -22,10 +321,13 @@ sideSerBarEle.innerHTML = `
     <a href="./service-ERP_App.html"><li class="s-li-elements">ERP Applications</li></a>
     <a href="./service-CS.html"><li class="s-li-elements">Computer Stationery</li></a>
   </ul>
-`
-console.log(sideSerBarEle.innerHTML);
-console.log("N bang");
-
+  `
+  // console.log(sideSerBarEle.innerHTML);
+  // console.log("N bang");
+  
+} catch (error) {
+  // console.log(error);
+}
 // -------------------Err init-----------------------------------------------------------------------*/
 document.head = document.head || document.getElementsByTagName("head")[0];
 
@@ -55,36 +357,43 @@ changeFavicon("../css/images/ric-logos/logo.png");
 
 if (path[3] == "contact.html") {
   document.title = ptitle + "-Contact Us";
-} else if ((path[3] == "index.html")||(path[3] == "")) {
+} 
+if ((path[3] == "index.html")||(path[3] == "")) {
   document.title = ptitle;
-} else if (path[3] == "clients.html") {
+}
+ if (path[3] == "clients.html") {
   document.title = ptitle + " -Clients";
-} else if (path[3] == "career.html") {
+}
+ if (path[3] == "career.html") {
   document.title = ptitle + " -Career";
-} else if (path[3] == "about-us-OT.html") {
+} if (path[3] == "about-us-OT.html") {
   document.title = ptitle + " -Our Team";
-} else if (path[3] == "service-Man.html") {
+}
+ if (path[3] == "service-Man.html") {
   document.title = ptitle + "-Manpower Supply";
-} else if (path[3] == "service-Soft.html") {
+}
+ if (path[3] == "service-Soft.html") {
   document.title = ptitle + "-Software Developement";
-} else if (path[3] == "service-Web.html") {
+}
+ if (path[3] == "service-Web.html") {
   document.title = ptitle + "-Web Design & Developement";
-} else if (path[3] == "service-Net.html") {
+}
+ if (path[3] == "service-Net.html") {
   document.title = ptitle + "-Networking";
 }
-else if (path[3] == "service-ConSer.html") {
+if (path[3] == "service-ConSer.html") {
   document.title = ptitle + "-Consultency Services";
 }
- else if (path[3] == "service-CS.html") {
+ if (path[3] == "service-CS.html") {
   document.title = ptitle + "-Computer Stationery";
 }
-else if (path[3] == "service-CSC.html") {
+ if (path[3] == "service-CSC.html") {
   document.title = ptitle + "-Customer Support Center";
 }
- else if (path[3] == "./service-CE.html") {
+ if (path[3] == "./service-CE.html") {
   document.title = ptitle + "-Computer Education";
 }
- else if (path[3] == "./service-ERP_App.html") {
+ if (path[3] == "./service-ERP_App.html") {
   document.title = ptitle + "-ERP Applications";
 }
 
@@ -101,7 +410,7 @@ if (winWidth < 920) {
       componentsBorder.classList.remove("YesBorder");
       componentsBorder.classList.add("NoBorder");
       
-      console.log();
+      // console.log();
     } else {
       mContent.style.height = "0px";
       mContent.style.visibility = "hidden";
@@ -167,57 +476,7 @@ s_dropdown.innerHTML = `<li><a href="./service-Net.html" target="_blank">Network
 
 
 // Contact Submit Handler 
-if (document.title == (ptitle + "-Contact Us")){
-  let subBtn = document.querySelector('#conSubBtn')
-  
-  subBtn.addEventListener('click',e=>feedbackToCompany(e))
-  
-}
-
-
-
-const feedbackToCompany =async (e)=>{
-  let emptyWarning = document.querySelector('#empty-warning')
-  let feedback_inputs = Array.from(document.querySelectorAll('.feedback-inputs'))
-  feedback_obj = {name:null,email:null,phoneNo:null,subject:null,message:null}
-  feedback_inputs.forEach((input,index)=>{
-    if (input.value != ''){
-      if (index==0){
-        feedback_obj.name = input.value;
-      }
-      else if (index==1){
-        feedback_obj.email = input.value;
-      }
-      else if (index==2){
-        feedback_obj.phoneNo = input.value;
-      }
-      else if (index==3){
-        feedback_obj.subject = input.value;
-      }
-      else if (index==4){
-        feedback_obj.message = input.value;
-      }
-      
-      // console.log(feedback_obj)
-    }
-    else{
-      emptyWarning.style.visibility = 'visible'
-      setTimeout(()=>{
-        emptyWarning.style.visibility = 'hidden'
-      },1800)
-    }
-  })
-  console.log(feedback_obj);
-is_FeedBack_OBJ_Ready_To_Be_Posted_in_DB = true
-
-// post request using fetch
-
-// let headers = {
-  
-// }
-// fetch('http:localhost:7777/contact',headers)
-}
-
+// if (document.title == (ptitle + "-Contact Us")){
 
 
 
@@ -227,8 +486,10 @@ is_FeedBack_OBJ_Ready_To_Be_Posted_in_DB = true
 
 // let innerContent_Array = Array.from(sideSerBarEle[0].childNodes)
 // var i =1;
-// console.log(typeof(innerContent_Array[i]));
-// console.log(innerContent_Array[i]);
+// // console.log(typeof(innerContent_Array[i]));
+// // console.log(innerContent_Array[i]);
 // // if (window.location.pathname.split("/")[3] == 'service-Soft.html'){
 
 // // 
+
+// console.log("All clear");

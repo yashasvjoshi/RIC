@@ -34,7 +34,7 @@ const cardTemp = (serviceName, desc, imgurl) => {
   return `
 <div class="card">
     <div class="card-img">
-                        <img src="${imgurl}" alt="">
+                        <img src="${imgurl}" alt="Image Not Avilable">
                         </div>
                     <div class="card-title">${serviceName}</div>
                     <div class="card-text">${
@@ -157,7 +157,7 @@ Partner with us for your consultancy needs and experience the benefits of having
     
     Partner with us for your ERP application needs and experience the benefits of having a robust and integrated system that optimizes your business processes, improves efficiency, and drives sustainable growth. Let us empower your organization with the power of ERP technology.`,
     imgURL:
-      "../css/images/services/CS1.jpg",
+      "../css/images/services/erp.png",
   },
   {
     service: "Computer Stationery",
@@ -171,7 +171,7 @@ Partner with us for your consultancy needs and experience the benefits of having
     
     Partner with us for your computer stationery needs and experience the convenience of a one-stop-shop for all your stationery requirements. We are committed to providing you with top-notch products, excellent customer service, and timely delivery, ensuring that you have the necessary supplies to support your computer-based operations effectively.`,
     imgURL:
-      "../css/images/services/CS1.jpg",
+      "../css/images/services/CSSH1.jpg",
   },
 ];
 
@@ -221,14 +221,27 @@ const AddCardsToRows = ()=>{
 
 
 
-if (window.location.pathname.split("/")[3].split(".")[0] ==("index")||window.location.pathname.split("/")[3].split(".")[0] =="phone-services") {
+// if (window.location.pathname.split("/")[3].split(".")[0] ==("index")||window.location.pathname.split("/")[3].split(".")[0] =="phone-services") {
+try {
   AddCardsToRows()
-}
+} catch (error) {
+  console.log(error);
+}  
+// }
 // else if (window.location.pathname.split("Frontend")[1]==("/pages/")||window.location.pathname.split("Frontend")[1]==("/pages/index.html")) {
 //   AddCardsToRows()
 // }
 
 let cardBtns = document.querySelectorAll(".card-btn");
+
+try {
+  let sImgGB = document.getElementById("s-img");// GB in the var name stands for "Global Variable"
+  sImgGB.setAttribute("alt","Image Not AVILABLE")
+} catch (error) {
+  console.log(error);
+}
+
+
 
 
  if (window.location.pathname.split("/")[3].split(".")[0] == "service-Web") {
